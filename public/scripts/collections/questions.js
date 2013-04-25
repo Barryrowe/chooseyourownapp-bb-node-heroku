@@ -1,4 +1,7 @@
 App.Collections.Questions = Backbone.Collection.extend({
 	model: App.Models.Question,
-	localStorage: new Backbone.LocalStorage("cyOverflow:questions")
+	backend: 'questionBackend',
+	initialize: function(){
+		this.bindBackend();
+	}
 });
